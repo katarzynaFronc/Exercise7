@@ -35,7 +35,6 @@
 }
 
 body {
-  /* padding: 0; */
   line-height: 1.6;
   color: var(--text-color);
   min-height: 100vh;
@@ -59,13 +58,21 @@ body {
 
 .smDashboard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 1100px;
+  max-width: 1100px;
+  width: 95%;
   margin: auto;
 }
 
+.smDashboard--content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  height: 80px;
+}
+
 .followers {
-  /* margin: 10vh auto; */
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   justify-content: center;
@@ -81,10 +88,16 @@ body {
   border-radius: 5px;
 }
 
+.overview--title {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+}
+
 .overview {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   max-width: 1100px;
   margin: auto;
@@ -110,19 +123,19 @@ body {
 }
 
 .theme-switch-wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin: 0;
+  width: 160px;
 }
 
-.theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
+.theme-switch-wrapper p {
+  margin-right: 10px;
 }
 
 .slider {
-  background: linear-gradient(60deg, var(--color--toggle-DarkTheme-LinearGradient1), var(--color--toggle-DarkTheme-LinearGradient2));
+  background: var(--color--toggle-LightTheme);
   filter: alpha(opacity=50);
   bottom: 0;
   cursor: pointer;
@@ -138,7 +151,7 @@ body {
   bottom: 3px;
   content: "";
   height: 22px;
-  left: 3px;
+  right: 3px;
   position: absolute;
   transition: 0.4s;
   width: 22px;
@@ -153,11 +166,12 @@ body {
 }
 
 input:checked + .slider {
-  background: var(--color--toggle-LightTheme);
+  /*----*/
+  background: linear-gradient(60deg, var(--color--toggle-DarkTheme-LinearGradient1), var(--color--toggle-DarkTheme-LinearGradient2));
 }
 
 input:checked + .slider:before {
-  transform: translateX(32px);
+  transform: translateX(-32px);
 }
 
 /*-----------------------------*/
@@ -173,3 +187,41 @@ input:checked + .slider:before {
 }
 
 /*-----------------------------*/
+
+@media screen and (max-width: 545px) {
+  .background {
+    display: none;
+  }
+
+  .smDashboard--content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 375px;
+    height: 80px;
+    margin: auto;
+  }
+
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 320px;
+  }
+  .followers {
+    display: grid;
+    grid-template-columns: 320px;
+    margin-top: 160px;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: 320px;
+  }
+
+  .overview--title {
+    width: 320px;
+    margin: auto;
+  }
+}
