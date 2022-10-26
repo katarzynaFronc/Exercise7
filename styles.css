@@ -35,7 +35,7 @@
 }
 
 body {
-  margin: 0;
+  /* padding: 0; */
   line-height: 1.6;
   color: var(--text-color);
   min-height: 100vh;
@@ -43,6 +43,57 @@ body {
   background-repeat: no-repeat;
   font-size: 0.875rem;
   font-family: "Inter", sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+.background {
+  background-color: var(--tbg-pattern-color);
+  margin: auto;
+  width: 100%;
+  height: 240px;
+  border-radius: 0 0 20px 20px;
+  z-index: -1;
+  position: absolute;
+}
+
+.smDashboard {
+  display: flex;
+  justify-content: center;
+  width: 1100px;
+  margin: auto;
+}
+
+.followers {
+  /* margin: 10vh auto; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.followers--card {
+  height: 200px;
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.overview--card {
+  height: 100px;
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
 }
 
 /*-------------swith----------*/
