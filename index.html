@@ -11,10 +11,10 @@
 
     <title>Frontend Mentor | Social media dashboard</title>
   </head>
-  <body>
+  <div>
     <div class="background"></div>
     <header class="smDashboard">
-      <div class="smDashboard--content">
+      <div class="smDashboard__content">
         <div class="smDashboard--title">
           <h1>Social Media Dashboard</h1>
           <p>Total Followers: 23,004</p>
@@ -28,23 +28,70 @@
         </div>
       </div>
     </header>
-    <div class="followers">
-      <div class="followers--card facebook">@nathanf 1987 Followers 12 Today</div>
-      <div class="followers--card twitter">@nathanf 1044 Followers 99 Today</div>
-      <div class="followers--card instagram">@realnathanf 11k Followers 1099 Today</div>
-      <div class="followers--card youtube">Nathan F. 8239 Subscribers 144 Today</div>
-    </div>
-    <h2 class="overview--title">Overview - Today</h2>
-    <div class="overview">
-      <div class="overview--card">Page Views 87 3%</div>
-      <div class="overview--card">Likes 52 2%</div>
-      <div class="overview--card">Likes 5462 2257%</div>
-      <div class="overview--card">Profile Views 52k 1375%</div>
-      <div class="overview--card">Retweets 117 303%</div>
-      <div class="overview--card">Likes 507 553%</div>
-      <div class="overview--card">Likes 107 19%</div>
-      <div class="overview--card">Total Views 1407 12%</div>
-    </div>
+    <section class="followers">
+      <div class="followers__card facebook">
+        <hr>
+        <div class="followers--name">
+          <img src="./images/icon-facebook.svg">
+          <p> @nathanf</p>
+        </div>
+        <h2>1987</h2>
+        <h4>Followers</h4>
+        <div class="followers--today"> 
+          <img src="./images/icon-up.svg">
+          <p class="followers--up">12 Today</p>
+        </div>
+      </div>
+      <div class="followers__card twitter">
+        <hr>
+        <div class="followers--name">
+          <img src="./images/icon-twitter.svg">
+          <p>@nathanf</p>
+        </div>
+        <h2>1044</h2>
+        <h4>Followers</h4>
+        <div class="followers--today">
+          <img src="./images/icon-up.svg">
+          <p class="followers--up">99 Today</p>
+        </div>
+      </div>
+      <div class="followers__card instagram">
+        <hr>
+        <div class="followers--name">
+          <img src="./images/icon-instagram.svg">
+         <p>@realnathanf</p>
+        </div>
+        <h2>11k</h2>
+        <h4>Followers</h4>
+        <div class="followers--today">
+          <img src="./images/icon-up.svg">
+          <p class="followers--up">1099 Today</p>
+        </div>
+      </div>
+      <div class="followers__card youtube">
+        <hr>
+        <div class="followers--name">
+          <img src="./images/icon-youtube.svg">
+          <p>Nathan F.</p>
+        </div>
+        <h2>8239</h2>
+        <h4>Subscribers</h4>
+        <div class="followers--today">
+          <img src="./images/icon-down.svg">
+          <p class="followers--down">144 Today</p>
+        </div>
+      </div>
+    </section>
+    <h2 class="overview__title">Overview - Today</h2>
+    <section class="overview">
+      <div class="overview__card facebook">Likes 52 2%</div>
+      <div class="overview__card instagram">Likes 5462 2257%</div>
+      <div class="overview__card instagram">Profile Views 52k 1375%</div>
+      <div class="overview__card twitter">Retweets 117 303%</div>
+      <div class="overview__card twitter">Likes 507 553%</div>
+      <div class="overview__card youtube">Likes 107 19%</div>
+      <div class="overview__card youtube">Total Views 1407 12%</div>
+    </section>
 
     <div class="attribution">
       Challenge by

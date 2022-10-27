@@ -5,11 +5,12 @@
 }
 
 :root {
-  --color--primary-LimeGreen: hls(163, 72%, 41%);
+  --color--primary-LimeGreen: hsl(163, 72%, 41%);
   --color--primary-BrightRed: hsl(356, 69%, 56%);
   --color--primary-Facebook: hsl(208, 92%, 53%);
   --color--primary-Twitter: hsl(203, 89%, 53%);
-  --color--primary-Instagram: linear-gradient(180deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --color--primary-Instagram-LinearGradient1: hsl(37, 97%, 70%);
+  --color--primary-Instagram-LinearGradient2: hsl(329, 70%, 58%);
   --color--primary-YouTube: hsl(348, 97%, 39%);
 
   --color--toggle-LightTheme: hsl(230, 22%, 74%);
@@ -26,7 +27,7 @@
 
 :root .dark-theme {
   --tbg-pattern-color: hsl(232, 19%, 15%);
-  --text-color: hsl(228, 34%, 66%);
+  /* --text-color-DB: hsl(228, 34%, 66%); */
   --text-color: #fff;
   --bg-color-VDB: hsl(230, 17%, 14%);
   --bg-color: linear-gradient(180deg, #191926 30%, #10101a 0);
@@ -50,7 +51,7 @@ body {
   background-color: var(--tbg-pattern-color);
   margin: auto;
   width: 100%;
-  height: 240px;
+  height: 260px;
   border-radius: 0 0 20px 20px;
   z-index: -1;
   position: absolute;
@@ -65,11 +66,24 @@ body {
   margin: auto;
 }
 
-.smDashboard--content {
+.smDashboard__content {
   display: flex;
   justify-content: space-between;
   max-width: 1100px;
   height: 80px;
+  margin-top: 30px;
+}
+
+.smDashboard--title h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color-VDB);
+}
+
+.smDashboard--title p {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
 }
 
 .followers {
@@ -79,16 +93,92 @@ body {
   gap: 30px;
   max-width: 1100px;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
-.followers--card {
-  height: 200px;
+.followers__card {
+  height: 220px;
   background-color: var(--card-bg-color);
   border-radius: 5px;
+  padding: 0;
+  margin: 0;
 }
 
-.overview--title {
+.followers__card hr {
+  margin: 0;
+  height: 3px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.facebook hr {
+  background: var(--color--primary-Facebook);
+}
+
+.twitter hr {
+  background: var(--color--primary-Twitter);
+}
+
+.instagram hr {
+  background: linear-gradient(60deg, var(--color--primary-Instagram-LinearGradient1), var(--color--primary-Instagram-LinearGradient2));
+}
+
+.youtube hr {
+  background: var(--color--primary-YouTube);
+}
+
+.followers--name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 10px 0;
+}
+
+.followers__card h2 {
+  color: var(--text-color-VDB);
+  text-align: center;
+  font-size: 3.3rem;
+  margin: 0 0 -10px 0;
+}
+
+.followers__card p {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.followers__card h4 {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.followers--name p {
+  font-weight: 700;
+  padding-left: 8px;
+}
+
+.followers--today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.followers--up {
+  color: var(--color--primary-LimeGreen);
+  font-weight: 700;
+}
+
+.followers--down {
+  color: var(--color--primary-BrightRed);
+  font-weight: 700;
+}
+
+.overview__title {
   width: 95%;
   max-width: 1100px;
   margin: auto;
@@ -103,7 +193,7 @@ body {
   margin: auto;
 }
 
-.overview--card {
+.overview__card {
   height: 100px;
   background-color: var(--card-bg-color);
   border-radius: 5px;
@@ -132,6 +222,8 @@ body {
 
 .theme-switch-wrapper p {
   margin-right: 10px;
+  font-weight: 700;
+  color: var(--color--toggle-LightTheme);
 }
 
 .slider {
