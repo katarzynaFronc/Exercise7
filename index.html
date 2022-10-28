@@ -19,9 +19,10 @@
           <h1>Social Media Dashboard</h1>
           <p>Total Followers: 23,004</p>
         </div>
+        <hr class="smDashboard__mobile">
         <div class="theme-switch-wrapper">
           <p>Dark Mode</p>
-          <label class="theme-switch" for="checkbox">
+          <label id="theme-switch" class="active" for="checkbox">
             <input type="checkbox" id="checkbox" />
             <div class="slider round"></div>
           </label>
@@ -32,65 +33,130 @@
       <div class="followers__card facebook">
         <hr>
         <div class="followers--name">
-          <img src="./images/icon-facebook.svg">
+          <img src="./images/icon-facebook.svg" alt="">
           <p> @nathanf</p>
         </div>
         <h2>1987</h2>
-        <h4>Followers</h4>
+        <h5>Followers</h5>
         <div class="followers--today"> 
-          <img src="./images/icon-up.svg">
-          <p class="followers--up">12 Today</p>
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">12 Today</p>
         </div>
       </div>
       <div class="followers__card twitter">
         <hr>
         <div class="followers--name">
-          <img src="./images/icon-twitter.svg">
+          <img src="./images/icon-twitter.svg" alt="">
           <p>@nathanf</p>
         </div>
         <h2>1044</h2>
-        <h4>Followers</h4>
+        <h5>Followers</h5>
         <div class="followers--today">
-          <img src="./images/icon-up.svg">
-          <p class="followers--up">99 Today</p>
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">99 Today</p>
         </div>
       </div>
       <div class="followers__card instagram">
         <hr>
         <div class="followers--name">
-          <img src="./images/icon-instagram.svg">
+          <img src="./images/icon-instagram.svg" alt="">
          <p>@realnathanf</p>
         </div>
         <h2>11k</h2>
-        <h4>Followers</h4>
+        <h5>Followers</h5>
         <div class="followers--today">
-          <img src="./images/icon-up.svg">
-          <p class="followers--up">1099 Today</p>
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">1099 Today</p>
         </div>
       </div>
       <div class="followers__card youtube">
         <hr>
         <div class="followers--name">
-          <img src="./images/icon-youtube.svg">
+          <img src="./images/icon-youtube.svg" alt="">
           <p>Nathan F.</p>
         </div>
         <h2>8239</h2>
-        <h4>Subscribers</h4>
+        <h5>Subscribers</h5>
         <div class="followers--today">
-          <img src="./images/icon-down.svg">
-          <p class="followers--down">144 Today</p>
+          <img src="./images/icon-down.svg" alt="">
+          <p class="down">144 Today</p>
         </div>
       </div>
     </section>
     <h2 class="overview__title">Overview - Today</h2>
     <section class="overview">
-      <div class="overview__card facebook">Likes 52 2%</div>
-      <div class="overview__card instagram">Likes 5462 2257%</div>
-      <div class="overview__card instagram">Profile Views 52k 1375%</div>
-      <div class="overview__card twitter">Retweets 117 303%</div>
-      <div class="overview__card twitter">Likes 507 553%</div>
-      <div class="overview__card youtube">Likes 107 19%</div>
-      <div class="overview__card youtube">Total Views 1407 12%</div>
+      <div class="overview__card facebook">
+        <p>Page Views</p>
+        <img src="./images/icon-facebook.svg" alt="">
+        <h4>87</h4>
+        <div class="percent">
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">3%</p>
+        </div>
+      </div>
+      <div class="overview__card facebook">
+        <p>Likes</p>
+        <img src="./images/icon-facebook.svg" alt="">
+        <h4>52</h4>
+        <div class="percent">
+          <img src="./images/icon-down.svg" alt="">
+          <p class="down">2%</p>
+        </div>
+      </div>
+      <div class="overview__card instagram">
+        <p>Likes</p>
+        <img src="./images/icon-instagram.svg" alt="">
+        <h4>5462</h4>
+        <div class="percent">
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">2257%</p>
+        </div>
+      </div>
+      <div class="overview__card instagram">
+        <p>Profile Views</p>
+        <img src="./images/icon-instagram.svg" alt="">
+        <h4>52k</h4>
+        <div class="percent">
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">1375%</p>
+        </div>
+      </div>
+      <div class="overview__card twitter">
+        <p>Retweets</p>
+        <img src="./images/icon-twitter.svg" alt="">
+        <h4>117</h4>
+        <div class="percent">
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">303%</p>
+        </div>
+      </div>
+      <div class="overview__card twitter">
+        <p>Likes</p>
+        <img src="./images/icon-twitter.svg" alt="">
+        <h4>507</h4>
+        <div class="percent">
+          <img src="./images/icon-up.svg" alt="">
+          <p class="up">553%</p>
+        </div>
+      </div>
+      <div class="overview__card youtube">
+        <p>Likes</p>
+        <img src="./images/icon-youtube.svg" alt="">
+        <h4>107</h4>
+        <div class="percent">
+          <img src="./images/icon-down.svg" alt="">
+          <p class="down">19%</p>
+        </div>
+      </div>
+      <div class="overview__card youtube">
+        <p>Total Views</p>
+        <img src="./images/icon-youtube.svg" alt="">
+        <h4>1407</h4>
+        <div class="percent">
+          <img src="./images/icon-down.svg" alt="">
+          <p class="down">12%</p>
+        </div>
+      </div>
     </section>
 
     <div class="attribution">
