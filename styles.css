@@ -301,6 +301,16 @@ input:checked + .slider:before {
   background: linear-gradient(60deg, var(--color--toggle-DarkTheme-LinearGradient1), var(--color--toggle-DarkTheme-LinearGradient2));
 }
 
+.followers__card:hover {
+  background-color: var(--card-bg-color-active);
+  cursor: pointer;
+}
+
+.overview__card:hover {
+  background-color: var(--card-bg-color-active);
+  cursor: pointer;
+}
+
 /*-----------------------------*/
 
 /*-------------footer----------*/
