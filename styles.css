@@ -18,19 +18,19 @@
   --color--toggle-DarkTheme-LinearGradient2: hsl(146, 68%, 55%);
 
   --tbg-pattern-color: hsl(225, 100%, 98%);
-  --text-color: hsl(228, 12%, 44%);
+  --text-color: #404040;
   --text-color-VDB: hsl(230, 17%, 14%);
   --bg-color: #fff;
   --card-bg-color: hsl(227, 47%, 96%);
   --card-bg-color-active: hsl(226, 37%, 88%);
 }
 
-:root .dark-theme {
+[data-theme="dark"] {
   --tbg-pattern-color: hsl(232, 19%, 15%);
-  /* --text-color-DB: hsl(228, 34%, 66%); */
-  --text-color: #fff;
+  --text-color-VDB: #fff;
+  --text-color: hsl(228, 34%, 66%);
   --bg-color-VDB: hsl(230, 17%, 14%);
-  --bg-color: linear-gradient(180deg, #191926 30%, #10101a 0);
+  --bg-color: hsl(230, 17%, 14%);
   --card-bg-color: hsl(228, 28%, 20%);
   --card-bg-color-active: hsl(227, 29%, 32%);
 }
@@ -236,14 +236,14 @@ body {
 
 /*-------------swith----------*/
 
-#theme-switch {
+.theme-switch {
   display: inline-block;
   position: relative;
   height: 28px;
   width: 60px;
 }
 
-#theme-switch input {
+.theme-switch input {
   display: none;
 }
 
@@ -391,47 +391,3 @@ input:checked + .slider:before {
     margin-bottom: 20px;
   }
 }
-
-/*-----------mode-------------*/
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tbg-pattern-color: hsl(232, 19%, 15%);
-    --text-color: #fff;
-    --bg-color-VDB: hsl(230, 17%, 14%);
-    --bg-color: linear-gradient(180deg, #191926 30%, #10101a 0);
-    --card-bg-color: hsl(228, 28%, 20%);
-    --card-bg-color-active: hsl(227, 29%, 32%);
-  }
-}
-
-[data-theme="dark"] {
-  --tbg-pattern-color: hsl(232, 19%, 15%);
-  --text-color: #fff;
-  --bg-color-VDB: hsl(230, 17%, 14%);
-  --bg-color: linear-gradient(180deg, #191926 30%, #10101a 0);
-  --card-bg-color: hsl(228, 28%, 20%);
-  --card-bg-color-active: hsl(227, 29%, 32%);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --tbg-pattern-color: hsl(225, 100%, 98%);
-    --text-color: hsl(228, 12%, 44%);
-    --text-color-VDB: hsl(230, 17%, 14%);
-    --bg-color: #fff;
-    --card-bg-color: hsl(227, 47%, 96%);
-    --card-bg-color-active: hsl(226, 37%, 88%);
-  }
-}
-
-[data-theme="light"] {
-  --tbg-pattern-color: hsl(225, 100%, 98%);
-  --text-color: hsl(228, 12%, 44%);
-  --text-color-VDB: hsl(230, 17%, 14%);
-  --bg-color: #fff;
-  --card-bg-color: hsl(227, 47%, 96%);
-  --card-bg-color-active: hsl(226, 37%, 88%);
-}
-
-/*-----------------------------*/
