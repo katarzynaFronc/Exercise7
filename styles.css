@@ -274,7 +274,7 @@ body {
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color: var(--tbg-pattern-color);
   bottom: 3px;
   content: "";
   height: 22px;
